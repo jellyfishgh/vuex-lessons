@@ -13,4 +13,4 @@ gulp.task('server', ['uglifyjs'], () => {
   shell.exec('npm run server')
 })
 
-gulp.task('default', ['server', 'watch'])
+gulp.task('default', ['server'])

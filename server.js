@@ -1,8 +1,6 @@
 var koa = require('koa')
 var app = koa()
 
-app.use(require('koa-static')('static'))
-
 // x-response-time
 
 app.use(function* (next) {
@@ -21,8 +19,6 @@ app.use(function* (next) {
   console.log('%s %s - %s', this.method, this.url, ms)
 })
 
-app.use(function* () {
-  this.body = 'Hello World'
-})
+app.use(require('koa-static')('static'))
 
 app.listen(3000)

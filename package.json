@@ -40,5 +40,8 @@
     "koa": "^1.2.5",
     "vue": "^2.1.10",
     "vuex": "^2.1.2"
+  },
+  "browser": {
+    "vue": "vue/dist/vue.common"
   }
 }
