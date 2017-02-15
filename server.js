@@ -19,6 +19,8 @@ app.use(function* (next) {
   console.log('%s %s - %s', this.method, this.url, ms)
 })
 
-app.use(require('koa-static')('static'))
+app.use(require('koa-static')('.', {
+  index: 'static/index.html'
+}))
 
 app.listen(3000)
