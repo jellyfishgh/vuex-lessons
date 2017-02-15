@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>counter-hot</title>
+  <link rel="stylesheet" href="/global.css">
+</head>
+
+<body>
+  <div id="app">
+    Value: {{ count }}
+    <button @click="increment">+</button>
+    <button @click="decrement">-</button>
+    <button @click="incrementIfOdd">Increment if odd</button>
+    <button @click="incrementAsync">Increment async</button>
+    <div>
+      <div>Recent History (last 5 entries): {{ recentHistory }}</div>
+    </div>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+
+</html>

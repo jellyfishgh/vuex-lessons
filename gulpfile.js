@@ -1,16 +1,8 @@
 const gulp = require('gulp')
 const shell = require('shelljs')
 
+const what = 'shopping-cart'
 gulp.task('browserify', () => {
-  shell.exec('npm run browserify')
+  shell.exec(`npm run browserify:${what}`)
 })
-
-gulp.task('uglifyjs', ['browserify'], () => {
-  shell.exec('npm run uglifyjs')
-})
-
-gulp.task('server', ['uglifyjs'], () => {
-  shell.exec('npm run server')
-})
-
-gulp.task('default', ['server'])
+gulp.task('default', ['browserify'])

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>counter</title>
+  <link rel="stylesheet" href="/global.css">
+</head>
+
+<body>
+  <div id="app">
+    <div>Clicked: {{ $store.state.count }} times, count is {{ evenOrOdd }}.</div>
+    <button @click="increment">+</button>
+    <button @click="decrement">-</button>
+    <button @click="incrementIfOdd">Increment if odd</button>
+    <button @click="incrementAsync">Increment async</button>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+
+</html>
